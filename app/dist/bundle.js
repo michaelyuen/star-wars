@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	var _react = __webpack_require__(1);
 
@@ -54,31 +54,21 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
+	var _app = __webpack_require__(172);
+
+	var _app2 = _interopRequireDefault(_app);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var HelloWorld = _react2.default.createClass({
-		displayName: "HelloWorld",
-
-		render: function render() {
-			return _react2.default.createElement(
-				"p",
-				null,
-				"Hello, ",
-				this.props.greetTarget,
-				"!"
-			);
-		}
-	});
-
 	_reactDom2.default.render(_react2.default.createElement(
-		"div",
+		'div',
 		null,
-		_react2.default.createElement(HelloWorld, { greetTarget: "Batman" }),
-		_react2.default.createElement(HelloWorld, { greetTarget: "Iron Man" }),
-		_react2.default.createElement(HelloWorld, { greetTarget: "Json Bourne" }),
-		_react2.default.createElement(HelloWorld, { greetTarget: "Megatronious" }),
-		_react2.default.createElement(HelloWorld, { greetTarget: "Dom Johnson" }),
-		_react2.default.createElement(HelloWorld, { greetTarget: "She Hulk" })
+		_react2.default.createElement(_app2.default, { greetTarget: 'Batman' }),
+		_react2.default.createElement(_app2.default, { greetTarget: 'Iron Man' }),
+		_react2.default.createElement(_app2.default, { greetTarget: 'Json Bourne' }),
+		_react2.default.createElement(_app2.default, { greetTarget: 'Megatronious' }),
+		_react2.default.createElement(_app2.default, { greetTarget: 'Dom Johnson' }),
+		_react2.default.createElement(_app2.default, { greetTarget: 'She Hulk' })
 	), document.getElementById('app'));
 
 /***/ },
@@ -21447,6 +21437,26 @@
 
 	module.exports = ReactDOMNullInputValuePropHook;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+
+/***/ },
+/* 172 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	var HelloWorld = React.createClass({
+		displayName: "HelloWorld",
+
+		render: function render() {
+			return React.createElement(
+				"p",
+				null,
+				"Hello, ",
+				this.props.greetTarget,
+				"!"
+			);
+		}
+	});
 
 /***/ }
 /******/ ]);

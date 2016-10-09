@@ -1,6 +1,6 @@
 {
 	"name": "star-wars",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "Star Wars app built with React and powered by SWAPI",
 	"license": "MIT",
 	"author": "Michael Yuen <michaelclaytonyuen@gmail.com>",
