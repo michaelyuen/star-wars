@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HelloWorld from './app';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+import App from './app';
+
+// Needed for onTouchTap
+// http://stackoverflow.com/a/34015469/988941
+injectTapEventPlugin();
 
 ReactDOM.render(
-	<div>
-		<HelloWorld greetTarget="Batman"/>
-		<HelloWorld greetTarget="Iron Man"/>
-		<HelloWorld greetTarget="Json Bourne"/>
-		<HelloWorld greetTarget="Megatronious"/>
-		<HelloWorld greetTarget="Dom Johnson"/>
-		<HelloWorld greetTarget="She Hulk"/>
-	</div>,
+	<App title="Star Wars" baseUrl="http://swapi.co/api/" />,
 	document.getElementById('app')
 );
