@@ -1,5 +1,8 @@
 import React from 'react';
 
+import Header from './components/header/header.js';
+import List from './components/list/list.js';
+
 var App = React.createClass({
 
 	getInitialState: function(){
@@ -9,22 +12,33 @@ var App = React.createClass({
 
 	loadFromServer: function( url ){
 
-		fetch( url )
-			.then( function( res ){
+		// fetch( url )
+		// 	.then( function( res ){
 
-				return res.json();
-			})
-			.then( function( res ){
+		// 		return res.json();
+		// 	})
+		// 	.then( function( res ){
 
-				var resArray = Object.keys( res ).map(function( key ){
-					return { name: key, url: res[key] };
-				});
-				this.setState( { data: resArray } );
+		// 		var resArray = Object.keys( res ).map(function( key ){
+		// 			return { name: key, url: res[key] };
+		// 		});
+		// 		this.setState( { data: resArray } );
 
-			}.bind(this))
-			.catch( function( err ){
-				console.error( err );
-			});
+		// 	}.bind(this))
+		// 	.catch( function( err ){
+		// 		console.error( err );
+		// 	});
+
+		this.setState({
+			data: [
+				{ name: 'people'},
+				{ name: 'planets'},
+				{ name: 'films'},
+				{ name: 'species'},
+				{ name: 'vehicles'},
+				{ name: 'starships'}
+			]
+		})
 	},
 
 	componentDidMount: function(){
@@ -34,10 +48,10 @@ var App = React.createClass({
 	},
 
 	render: function(){
-
 		return (
 			<div>
-				<h1>{this.props.title}</h1>
+				<Header title={this.props.title} />
+				<List data={this.state.data} />
 			</div>
 		);
 	}
