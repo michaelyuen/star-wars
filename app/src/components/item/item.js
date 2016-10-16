@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 var style = {
 	itemContainer: {
@@ -19,7 +20,9 @@ var Item = React.createClass({
 	render: function(){
 		return (
 			<div style={style.itemContainer}>
-				<div style={style.item}>{ this.props.item.name }</div>
+				<Link to={'/list/' + this.props.item.name}>
+					<div style={style.item}>{ this.props.item.name }</div>
+				</Link>
 			</div>
 		);
 	}
