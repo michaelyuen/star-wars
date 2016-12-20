@@ -4,13 +4,13 @@ import Item from '../item/item.js';
 
 var style = {
 	container: {
-		background: '#37474F'
+		background: '#303030'
 	},
 	list: {
 		display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between',
 		margin: 'auto',
 		paddingTop: 50,
-		width: '70vw', minHeight: '70vh'
+		width: '50vw', minHeight: '70vh'
 	}
 };
 

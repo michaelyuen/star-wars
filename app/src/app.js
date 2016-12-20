@@ -9,7 +9,8 @@ var App = React.createClass({
 
 	getInitialState: function(){
 
-		this.title = 'Star Wars';
+		this.title = 'STAR WARS';
+		this.subtitle = 'a simple React app digesting SWAPI'
 		this.baseUrl = 'http://swapi.co/api/';
 
 		var data = {
@@ -114,7 +115,7 @@ var App = React.createClass({
 
 		return (
 			<div>
-				<Header title={this.title} />
+				<Header title={this.title} subtitle={this.subtitle} />
 				<List data={data} />
 			</div>
 		);
